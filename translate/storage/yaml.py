@@ -158,7 +158,7 @@ class YAMLFile(base.TranslationStore):
             [self.get_root_node(units)],
             Dumper=YAMLDumper,
             default_flow_style=False, encoding='utf-8', allow_unicode=True,
-            deafult_style='|', width=float("inf"),
+            default_style='|', width=float("inf"),
         ))
 
     def _flatten(self, data, prev=""):
