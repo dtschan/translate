@@ -157,7 +157,8 @@ class YAMLFile(base.TranslationStore):
         out.write(yaml.dump_all(
             [self.get_root_node(units)],
             Dumper=YAMLDumper,
-            default_flow_style=False, encoding='utf-8', allow_unicode=True
+            default_flow_style=False, encoding='utf-8', allow_unicode=True,
+            width=float("inf"),
         ))
 
     def _flatten(self, data, prev=""):
