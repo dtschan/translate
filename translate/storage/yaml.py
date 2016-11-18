@@ -26,11 +26,12 @@ import uuid
 from collections import OrderedDict
 
 import six
-import yaml
-import yaml.constructor
+import ruaml.yaml
+import ruaml.yaml.constructor
 
 from translate.storage import base
 
+yaml = ruaml.yaml
 
 class OrderedDictYAMLLoader(yaml.SafeLoader):
     """
